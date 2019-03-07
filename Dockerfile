@@ -21,8 +21,8 @@ RUN printf "deb http://httpredir.debian.org/debian stretch-backports main \ndeb-
     rm -rf /var/lib/apt/lists/*
 
 # Build debos
-RUN go get github.com/go-debos/debos/cmd/debos && \
-    go install github.com/go-debos/debos/cmd/debos
+RUN go get github.com/fdanis-oss/debos/cmd/debos && \
+    go install github.com/fdanis-oss/debos/cmd/debos
 
 ### second stage - runner ###
 FROM debian:stretch-slim as runner
